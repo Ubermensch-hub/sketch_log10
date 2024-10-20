@@ -26,14 +26,14 @@ void setup()
 
 void loop() 
 {
-    for (int i=0; i!=10; ++i)
+    for (int i=0; i<=10; ++i)
     {
       set_text(log10(i));
       delay(1500);
       clear_screen();
     }
 
-    for (int i=10; i != 0; --i)
+    for (int i=10; i >= 0; --i)
     {
       set_text(log10(i));
       delay(1500);
