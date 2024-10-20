@@ -10,12 +10,11 @@ void clear_screen()
   oled.home();        // курсор в 0,0
 }
 
-void set_text(int arg)
+void set_text(float arg)
 {
       oled.print("res = ");
       oled.setCursor(0, 4);
       oled.print(arg);
-      delay(1500);
 }
 
 void setup() 
@@ -30,12 +29,14 @@ void loop()
     for (int i=0; i!=10; ++i)
     {
       set_text(log10(i));
+      delay(1500);
       clear_screen();
     }
 
     for (int i=10; i != 0; --i)
     {
       set_text(log10(i));
+      delay(1500);
       clear_screen();
     }
 }
